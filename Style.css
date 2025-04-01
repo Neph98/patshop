@@ -1,0 +1,368 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(Images/home.png);
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #081b29; /* Darker shade */
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    padding-left: 20px;
+    color: #ECF0F1; /* Light color for logo */
+}
+
+.navbar .menu {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar .menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .menu ul li {
+    margin: 0 15px;
+}
+
+.navbar .menu ul li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .menu ul li a:hover {
+    background-color: #16A085; /* Teal color */
+}
+
+.navbar .fa-bars {
+    color: #fff;
+    display: none;
+}
+
+/* Main Content */
+.main {
+    margin-top: 100px;
+    padding: 40px 20px;
+    background-color:#081b29;
+    border-radius: 8px;
+    box-shadow: 0 0 15px floralwhite;
+}
+
+.main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #FFF; /* Cool gray */
+}
+
+.main h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #FFF;
+}
+
+.main .par {
+    text-align: center;
+    font-size: 18px;
+    color: #fff; /* Light gray for paragraph */
+}
+
+.about1, #services, #design, #contact {
+    padding: 60px 20px;
+    background-color: #081b29; /* Light gray background */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #FFF;
+}
+
+/* Sub-title Styling */
+.about1 .sub-title, 
+#services .sub-title, 
+#design .sub-title, 
+#contact .sub-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Tab Styling */
+.about1 .tab-titles {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.tab-links {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.tab-links:hover {
+    color: #c9a7eb; /* Light purple hover effect */
+}
+
+.tab-links.active-link {
+    color: #48088a; /* Teal color for active link */
+    border-bottom: 3px solid #48088a;
+}
+
+/* Tab Content Styling */
+.tab-contents {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.tab-contents.active-tab {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* List Styling */
+.tab-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-contents li {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.tab-contents li span {
+    font-weight: bold;
+    color: #c9a7eb;
+    font-size: 18px;
+}
+
+
+/* Services Section */
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.services-list div {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.services-list div i {
+    font-size: 40px;
+    color: #16A085; /* Teal icon color */
+}
+
+.services-list div h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: black;
+}
+
+.services-list div p {
+    color: black;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #16A085;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Pricing Section */
+.pricing-list {
+    display: flex;
+    justify-content: space-between; /* Spreads out the cards evenly */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 30px;
+}
+
+.pricing-list div {
+    width: 30%; /* Makes each pricing card large like services */
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-list div h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: black;
+}
+
+.pricing-list div p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #16A085; /* Teal price color */
+}
+
+.pricing-list div ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-list div ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: black;
+}
+
+.pricing-list div a {
+    text-decoration: none;
+    color: #16A085;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+
+
+
+  
+
+/* Contact Form */
+#contact .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-left {
+    width: 45%;
+}
+
+.contact-right {
+    width: 45%;
+}
+
+.contact-left p, .contact-right form {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-right form input, .contact-right form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-right form button {
+    padding: 12px 20px;
+    background-color: #081; /* Teal button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-right form button:hover {
+    background-color: #081;
+}
+
+/* Social Icons */
+.Social-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Social-icons a {
+    font-size: 24px;
+    color: red;
+    transition: color 0.3s;
+}
+
+.Social-icons a:hover {
+    color: blue;
+}
+
+/* Footer */
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color:  #48088a; /* Dark footer */
+    color: #ECF0F1;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .fa-bars {
+        display: block;
+    }
+
+    .main, .about1, #services, #design, #contact {
+        padding: 20px;
+    }
+
+    .services-list {
+        flex-direction: column;
+    }
+
+    .services-list div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+}
